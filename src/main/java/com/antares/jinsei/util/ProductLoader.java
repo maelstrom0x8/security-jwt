@@ -4,18 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import com.antares.jinsei.model.Product;
 import com.antares.jinsei.repository.ProductRepository;
 
-public class ProductLoader implements CommandLineRunner {
+import jakarta.annotation.PostConstruct;
+
+@Component
+public class ProductLoader {
 
     @Autowired
     private ProductRepository productRepository;
 
-    @Override
-    public void run(String... args) throws Exception {
+    @PostConstruct
+    void loadProducts() {
         List<Product> products = new ArrayList<>(List.of(
                 new Product("quartz-watch"),
                 new Product("engineering-journal"),
