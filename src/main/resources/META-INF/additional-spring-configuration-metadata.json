@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "jinsei.authorization.key",
+  "type": "java.lang.String",
+  "description": "Static key for authentication"
+}]}

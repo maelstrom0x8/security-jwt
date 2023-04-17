@@ -1,14 +1,14 @@
 package com.antares.jinsei.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HelloController {
 
-    @GetMapping("/home")
-    public String index() {
-        return "index.html";
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello!";
     }
 
 }
