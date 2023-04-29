@@ -1,1 +1,3 @@
 rootProject.name = 'jinsei'
+include 'caveat'
+include 'strom'
